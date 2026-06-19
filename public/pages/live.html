@@ -1,65 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-href="../css/style.css">
-<title>Create Stream</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Create Stream - Kells Live</title>
 </head>
-
 <body>
 
 <div class="container">
+    <div class="card">
+        <h2 style="margin-bottom: 10px;">🎥 Setup Live Stream</h2>
 
-<div class="card">
+        <input id="title" placeholder="Stream Title">
+        <textarea id="description" placeholder="Description Details" rows="3"></textarea>
 
-<h2>🎥 Create Live Stream</h2>
+        <select id="category">
+            <option>Coding</option>
+            <option>Education</option>
+            <option>Gaming</option>
+            <option>Music</option>
+            <option>General</option>
+        </select>
 
-<input
-id="title"
-placeholder="Stream title">
+        <input id="duration" placeholder="Expected duration (e.g. 2 hours)">
 
-<textarea
-id="description"
-placeholder="Description"></textarea>
+        <select id="privacy">
+            <option value="public">Public Stream</option>
+            <option value="private">Private Isolation</option>
+        </select>
 
-<select id="category">
-<option>Coding</option>
-<option>Education</option>
-<option>Gaming</option>
-<option>Music</option>
-<option>General</option>
-</select>
-
-<input
-id="duration"
-placeholder="Expected duration">
-
-<select id="privacy">
-<option value="public">
-Public
-</option>
-
-<option value="private">
-Private
-</option>
-</select>
-
-<button
-class="btn"
-onclick="createStream()">
-
-Create Stream
-
-</button>
-
+        <button class="btn" onclick="createStream()">Initialize Transmission</button>
+    </div>
 </div>
 
-</div>
-
-<script type="module"
-src="../js/live.js"></script>
-
+<script type="module" src="../js/live.js"></script>
 </body>
 </html>

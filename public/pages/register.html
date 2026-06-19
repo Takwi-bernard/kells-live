@@ -1,40 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Register - Pulse Live</title>
+    <title>Register - Kells Live</title>
 </head>
-
 <body>
 
 <div class="container">
-
     <div class="card">
-
-        <h2>Create Account</h2>
-        <p style="color:gray;">Join Pulse Live today</p>
+        <h2 style="margin-bottom: 5px;">Create Account</h2>
+        <p style="color: var(--text-secondary); font-size: 14px;">Join Kells Live network today</p>
 
         <input type="text" id="fullName" placeholder="Full Name">
         <input type="text" id="username" placeholder="Username">
-        <input type="email" id="email" placeholder="Email">
+        <input type="email" id="email" placeholder="Email Address">
         <input type="password" id="password" placeholder="Password">
         <input type="password" id="confirmPassword" placeholder="Confirm Password">
 
         <button class="btn" onclick="register()">Create Account</button>
-
-        <p class="link" onclick="goLogin()">
-            Already have an account? Sign in
-        </p>
-
+        <p class="link" onclick="goLogin()">Already have an account? Sign in</p>
     </div>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../js/supabaseClient.js"></script>
-<script type="module"  src="../js/auth.js"></script>
-
-</body><script src="../js/dashboard.js"></script>
+<script type="module" src="../js/auth.js"></script>
 </body>
 </html>

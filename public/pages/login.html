@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Login - Pulse Live</title>
+    <title>Login - Kells Live</title>
 </head>
-
 <body>
 
 <div class="container">
-
     <div class="card">
+        <h2 style="margin-bottom: 5px;">Welcome Back</h2>
+        <p style="color: var(--text-secondary); font-size: 14px;">Log into your Kells Live terminal</p>
 
-        <h2>Welcome Back</h2>
-        <p style="color:gray;">Login to Pulse Live</p>
-
-        <input type="email" id="email" placeholder="Email">
+        <input type="email" id="email" placeholder="Email Address">
         <input type="password" id="password" placeholder="Password">
 
         <button class="btn" onclick="login()">Login</button>
-
-        <p class="link" onclick="goRegister()">
-            Don't have an account? Create one
-        </p>
-
+        <p class="link" onclick="goRegister()">Don't have an account? Create one</p>
     </div>
-
 </div>
 
-
-<script type="module"  src="../js/auth.js"></script>
-
+<script type="module" src="../js/auth.js"></script>
 </body>
-<!-- <script src="../js/dashboard.js"></script> -->
 </html>

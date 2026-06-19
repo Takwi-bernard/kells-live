@@ -1,121 +1,57 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Create Stream</title>
+    <title>Broadcast Studio - Kells Live</title>
 </head>
-
 <body>
 
+<div class="studio">
+    <header class="topbar">
+        <h2 class="logo">Kells<span>Live</span> Studio</h2>
+        <span id="liveStatus">⚫ OFFLINE</span>
+    </header>
 
-
-    <div class="studio">
-
-        <header class="topbar">
-            <h2>Pulse Live</h2>
-            <span id="liveStatus">⚫ OFFLINE</span>
-        </header>
-
-        <div class="main-layout">
-
-            <div class="video-panel">
-
-                <div class="video-wrapper">
-
-                    <video id="localVideo" autoplay muted playsinline>
-                    </video>
-
-                </div>
-
-                <div class="controls">
-
-                    ...
-
-                </div>
-
+    <div class="main-layout">
+        <div class="video-panel">
+            <div class="video-wrapper">
+                <video id="localVideo" autoplay muted playsinline></video>
             </div>
 
             <div class="controls">
+                <button id="micBtn" title="Toggle Microphone">🎤</button>
+                <button id="camBtn" title="Toggle Camera">📹</button>
+                <button id="screenBtn" title="Share Screen">🖥️</button>
+                <button id="copyBtn" title="Copy Link">📋</button>
+                <button id="startBtn" title="Start Live">🔴</button>
+                <button id="endBtn" title="End Stream">❌</button>
+            </div>
+        </div>
 
-
-
-                <button id="micBtn">🎤</button>
-
-                <button id="camBtn">📹</button>
-
-                <button id="screenBtn">🖥️</button>
-
-                <button id="copyBtn">📋</button>
-
-                <button id="startBtn">🔴</button>
-
-                <button id="endBtn">❌</button>
-
+        <div class="side-panel">
+            <div class="stream-info">
+                <h3 id="streamTitle" style="margin-bottom:10px;">Untitled Broadcast</h3>
+                <p style="margin-bottom: 5px;">Status: <span style="color:var(--text-secondary)">OFFLINE</span></p>
+                <p id="inviteLink" style="font-size:12px; word-break:break-all; color:var(--accent-blue);">Generating secure token...</p>
+                <p style="margin-top:10px;">👥 <span id="viewerCount">0</span> concurrent viewers</p>
+                <p>⏱ Time: <span id="streamTime">00:00</span></p>
             </div>
 
-
-
-        </div>
-
-    </div>
-
-    <div class="side-panel">
-
-        <div class="stream-info">
-
-            <h3 id="streamTitle">
-                Untitled Stream
-            </h3>
-
-            <p>
-                🔴 OFFLINE
-            </p>
-
-            <p id="inviteLink">
-                Generating...
-            </p>
-
-            <p>
-                👥
-                <span id="viewerCount">
-                    0
-                </span>
-                watching
-            </p>
-
-            <p>
-                ⏱
-                <span id="streamTime">
-                    00:00
-                </span>
-            </p>
-
-        </div>
-
-        <div class="chat">
-
-            <div id="messages"></div>
-
-            <div class="chat-box">
-
-                <input placeholder="Message">
-
-                <button>
-                    Send
-                </button>
-
+            <div class="chat">
+                <h4 style="border-bottom:1px solid var(--border-color); padding-bottom:8px;">Live Room Feed</h4>
+                <div id="messages"></div>
+                <div class="chat-box">
+                    <input placeholder="Type interactive response...">
+                    <button>Send</button>
+                </div>
             </div>
-
         </div>
-
     </div>
+</div>
 
-    </div>
-
-    </div>
-
-    </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="module" src="../js/broadcast.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="module" src="../js/broadcast.js"></script>
+</body>
+</html>

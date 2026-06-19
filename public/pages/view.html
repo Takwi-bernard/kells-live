@@ -1,40 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
-
-<title>Watch Live</title>
-
-<link rel="stylesheet"
-href="../css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Live - Kells Live</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
 <div class="discover">
+    <header class="discover-header" style="border-bottom:1px solid var(--border-color); padding-bottom:15px;">
+        <h1 class="logo">Kells<span>Live</span> Feed</h1>
+        <p style="color: var(--text-secondary);">Discover running active transmissions.</p>
+    </header>
 
-<header class="discover-header">
-
-<h1>🔴 Live Now</h1>
-
-<p>Discover live streams.</p>
-
-</header>
-
-<div id="streamList"
-class="stream-grid">
-
-Loading streams...
-
+    <div id="streamList" class="stream-grid" style="margin-top:25px;">
+        Loading active matrices...
+    </div>
 </div>
 
-</div>
-
-<script type="module"
-src="../js/view.js">
-</script>
-
+<script type="module" src="../js/view.js"></script>
 </body>
 </html>
